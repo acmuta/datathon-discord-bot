@@ -1,9 +1,14 @@
 {
-	"extends": "@tsconfig/node16-strictest-esm/tsconfig.json",
+	"extends": "@tsconfig/node-lts/tsconfig.json",
 	"compilerOptions": {
 		"rootDir": "src",
 		"outDir": "lib",
 		"composite": true,
-		"exactOptionalPropertyTypes": false
-	}
+		"incremental": true,
+		"resolveJsonModule": true
+	},
+	"include": [
+		"src/**/*.ts",
+		"src/**/*.json",
+	]
 }

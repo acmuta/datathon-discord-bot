@@ -2,7 +2,6 @@
 	"name": "datathon-discord-bot",
 	"version": "1.0.0",
 	"private": true,
-	"type": "module",
 	"main": "lib/main.js",
 	"scripts": {
 		"build": "tsc -b",
@@ -22,8 +21,11 @@
 		"url": "https://github.com/acmuta/datathon-discord-bot/issues"
 	},
 	"homepage": "https://github.com/acmuta/datathon-discord-bot#readme",
+	"dependencies": {
+		"discord.js": "^14.9.0"
+	},
 	"devDependencies": {
-		"@tsconfig/node16-strictest-esm": "^1.0.3",
+		"@tsconfig/node-lts": "^18.12.1",
 		"@types/node": "^18.15.11",
 		"@typescript-eslint/eslint-plugin": "^5.58.0",
 		"@typescript-eslint/parser": "^5.58.0",
@@ -31,8 +33,5 @@
 		"eslint-config-prettier": "^8.8.0",
 		"prettier": "^2.8.7",
 		"typescript": "^5.0.4"
-	},
-	"dependencies": {
-		"discord.js": "^14.9.0"
 	}
 }
