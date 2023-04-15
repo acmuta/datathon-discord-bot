@@ -111,7 +111,12 @@ const teamCreate: CommandRunFn = async (
 	}
 }
 
-const unquote = (str: string) => str.replace(/(^"|"$)/ug, '')
+const unquote = (str: string) => {
+	if (str.match(/^".*"$/)) {
+		return JSON.parse(str)
+	}
+	return str
+}
 
 const teamView: CommandRunFn = async (
 	{ config }: BotClient,
